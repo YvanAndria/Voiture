@@ -1,10 +1,18 @@
 <p style="color: green"><%= notice %></p>
+<div class="article">
+  <div class="hero">
+    <p> <%= @voiture.title%> </p>
+    <%= button_to "Retour", voitures_path %>
+  </div>
 
-<%= render @voiture %>
-
-<div>
-  <%= link_to "Edit this voiture", edit_voiture_path(@voiture) %> |
-  <%= link_to "Back to voitures", voitures_path %>
-
-  <%= button_to "Destroy this voiture", @voiture, method: :delete %>
+  <div class="img-container">
+    <img src="<%= @voiture.image%>">
+  </div>
+  <p id="location"><%=@voiture.location%></p>
+  <p id="model"><%=@voiture.model%></p>
+  <p><%=@voiture.description%></p>
+  <div>
+    <%= button_to "Modifier", edit_voiture_path(@voiture) %>
+    <%= button_to "Supprimer", @voiture, method: :delete %>
+  </div>
 </div>

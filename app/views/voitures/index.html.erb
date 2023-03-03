@@ -4,11 +4,17 @@
 
 <div id="voitures">
   <% @voitures.each do |voiture| %>
-    <%= render voiture %>
-    <p>
-      <%= link_to "Show this voiture", voiture %>
-    </p>
+  <div class="voiture-card">
+    <p><%= voiture.title %></p>
+    <div class="img-container">
+      <img src="<%= voiture.image %>">
+    </div>
+    <p><%= voiture.location %></p>
+    <p id="model"><%= voiture.model %></p>
+    <%= button_to "Voir plus", voiture %>
+    
+  </div>
   <% end %>
 </div>
 
-<%= link_to "New voiture", new_voiture_path %>
+<%= button_to "New voiture", new_voiture_path %>
