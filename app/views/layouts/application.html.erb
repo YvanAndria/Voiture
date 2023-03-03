@@ -8,13 +8,25 @@
 
     <%= stylesheet_link_tag "index", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Sora:wght@700&display=swap');
+</style>
+
+
     
   </head>
 
   <body>
-  <nav>
-    <img>
-  </nav>
-    <%= yield %>
+    <nav>
+      <img src="https://cdn.discordapp.com/attachments/1017509172486615231/1081252316977578024/descar.png">
+    </nav>
+    <main>
+      <%= yield %>
+    </main> 
+    <div class="new-car">
+    <button class="btn">
+      <%= link_to "Add new car", new_voiture_path %>
+    </button>
+    </div>
   </body>
 </html>

@@ -1,8 +1,8 @@
 <p style="color: green"><%= notice %></p>
 <div class="article">
   <div class="hero">
-    <p> <%= @voiture.title%> </p>
-    <%= button_to "Retour", voitures_path %>
+    <h1> <%= @voiture.title%> </h1>
+    <button class="btn"><%= link_to "Back", voitures_path %></button>
   </div>
 
   <div class="img-container">
@@ -11,8 +11,9 @@
   <p id="location"><%=@voiture.location%></p>
   <p id="model"><%=@voiture.model%></p>
   <p><%=@voiture.description%></p>
-  <div>
-    <%= button_to "Modifier", edit_voiture_path(@voiture) %>
-    <%= button_to "Supprimer", @voiture, method: :delete %>
+  <div class="actions">
+    <button class="btn"><%= link_to "Edit", edit_voiture_path(@voiture) %></button>
+   <%= button_to "Delete this car", @voiture, method: :delete, class:"btn" %>
+
   </div>
 </div>

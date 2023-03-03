@@ -1,9 +1,11 @@
-<h1>New voiture</h1>
+<div class="title">
+<h1>New Car</h1>
+<button class="btn"><%= link_to "Back to Cars", voitures_path %></button>
+</div>
 
 <%= render "form", voiture: @voiture %>
 
 <br>
 
 <div>
-  <%= link_to "Back to voitures", voitures_path %>
 </div>

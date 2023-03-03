@@ -10,33 +10,33 @@
       </ul>
     </div>
   <% end %>
-
-  <div>
+<div class="form-container">
+  <div class="form-child">
     <%= form.label :title, style: "display: block" %>
     <%= form.text_field :title %>
   </div>
 
-  <div>
+  <div class="form-child description">
     <%= form.label :image, style: "display: block" %>
     <%= form.text_area :image %>
   </div>
 
-  <div>
+  <div class="form-child">
     <%= form.label :description, style: "display: block" %>
     <%= form.text_area :description %>
   </div>
 
-  <div>
+  <div class="form-child">
     <%= form.label :model, style: "display: block" %>
     <%= form.text_field :model %>
   </div>
 
-  <div>
+  <div class="form-child">
     <%= form.label :location, style: "display: block" %>
     <%= form.text_area :location %>
   </div>
 
-  <div>
-    <%= form.submit %>
-  </div>
+</div>
+  <%= form.submit%>
+  
 <% end %>

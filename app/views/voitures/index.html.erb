@@ -1,20 +1,21 @@
-<p style="color: green"><%= notice %></p>
 
-<h1>Voitures</h1>
+<h1>Cars in the world</h1>
+<p style="width:40%">In a world where motor cars have become obsolete and unusable, the streets have become silent, devoid of the familiar roar of engines. Gas stations have become relics of the past, roads are overgrown, and abandoned cars are becoming more and more common.
+</p>
+<p style="color: green"><%= notice %></p>
 
 <div id="voitures">
   <% @voitures.each do |voiture| %>
   <div class="voiture-card">
-    <p><%= voiture.title %></p>
+    <h3><%= voiture.title %></h3>
     <div class="img-container">
       <img src="<%= voiture.image %>">
     </div>
     <p><%= voiture.location %></p>
     <p id="model"><%= voiture.model %></p>
-    <%= button_to "Voir plus", voiture %>
+    <button class="btn"><%= link_to "Show More", voiture %></button>
     
   </div>
   <% end %>
 </div>
 
-<%= button_to "New voiture", new_voiture_path %>
